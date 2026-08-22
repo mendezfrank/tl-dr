@@ -3,177 +3,268 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>[Frank Bernal] — ePortfolio</title>
-<meta name="description" content="[Frankie Bernal] — [Hardware Software Engineer] ePortfolio">
+<title>Frank Bernal — Hardware Systems Engineer</title>
+<meta name="description" content="Frank Bernal — Hardware Systems Engineer. Test tooling, HIL platforms, and diagnostics for autonomous vehicle manufacturing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="grain"></div>
+<div class="noise-layer" aria-hidden="true">
+  <svg>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence>
+      <feColorMatrix type="saturate" values="0"></feColorMatrix>
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)"></rect>
+  </svg>
+</div>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
 
-<header class="site-header">
+<header>
   <div class="header-inner">
-    <a href="#top" class="logo">[Y<span class="tilt">N</span>]</a>
-    <nav class="site-nav">
+    <div class="logo">FRANK BERNAL<span class="dot">.</span></div>
+    <nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
       <ul id="navList">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about"><span class="n">01</span>About</a></li>
+        <li><a href="#experience"><span class="n">02</span>Experience</a></li>
+        <li><a href="#design"><span class="n">03</span>Projects</a></li>
+        <li><a href="#contact"><span class="n">04</span>Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<section class="hero" id="hero">
+  <svg class="hero-trace" viewBox="0 0 1100 180" preserveAspectRatio="none">
+    <path d="M0,90 L120,90 L140,30 L160,150 L180,90 L260,90 L280,60 L300,120 L320,90 L420,90
+             L440,20 L460,160 L480,90 L600,90 L620,70 L640,110 L660,90 L760,90
+             L780,40 L800,140 L820,90 L940,90 L960,55 L980,125 L1000,90 L1100,90"/>
+  </svg>
+  <div class="wrap">
+    <div class="stamp">FIELD-TESTED · STILL RUNNING</div>
+    <div class="eyebrow">Hardware Systems Engineer — AV Manufacturing &amp; Test</div>
+    <h1>I build the infrastructure that gets <span class="accent">vehicles from bring-up to bus-ready.</span></h1>
+    <p class="hero-sub">Test tooling, HIL platforms, and diagnostics for autonomous vehicle manufacturing — the layer between a car on a lift and a car on the road.</p>
+    <p class="mono note-line">// most of my work is pulling a clean signal out of a noisy line</p>
+    <div class="hero-actions">
+      <a href="#design" class="btn btn-primary">View the work →</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+    <div class="readout">
+      <div><div class="val">53%</div><div class="lbl">Setup time reduced</div></div>
+      <div><div class="val">100</div><div class="lbl">Units fielded</div></div>
+      <div><div class="val">500+</div><div class="lbl">AVs serviced</div></div>
+      <div><div class="val">5</div><div class="lbl">Sites deployed</div></div>
+    </div>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-inner">
-      <p class="stamp">EST. [YEAR] · STILL STANDING</p>
-      <h1 class="hero-title">
-        [YOUR NAME]<br>
-        <span class="hero-sub">builds things that <span class="highlight">hold up.</span></span>
-      </h1>
-      <p class="hero-tagline">
-        [One or two scrappy, honest sentences about who you are and what you make.
-        e.g. "I'm a self-taught developer who breaks things until they work,
-        then breaks them again to understand why."]
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See the work</a>
-        <a href="#contact" class="btn btn-ghost">Say hello</a>
+<section class="stage" id="about" style="padding:60px 0;">
+  <div class="wrap">
+    <div class="stage-head" style="margin-bottom:22px;">
+      <h2 class="torn" style="font-size:24px;">About</h2>
+    </div>
+    <p style="max-width:640px; color:var(--text-dim); font-size:15.5px; line-height:1.75;">
+      I'm a Hardware Systems Engineer at Zoox on the Hardware Software Integration team, where I build internal tooling, diagnostics, and provisioning systems that help engineers and manufacturing teams work with autonomous vehicles more efficiently. Before this I was at Ford in Advanced EV Development, plus a few earlier roles at Zoox spanning manufacturing operations and test &amp; diagnostics — so I've got a pretty grounded, hands-on view of how hardware and software actually have to work together at scale, not just in theory. I'm finishing an MS in Computer Science at Oregon State University right now, working toward platform engineering roles in robotics and autonomy. Outside of work I bring the same instinct to hands-on projects — home renovation, building a communication device for my dogs — and I'm generally drawn to work that makes life easier for the people actually operating complex systems day to day.
+    </p>
+  </div>
+</section>
+
+<section class="stage" id="experience">
+  <div class="wrap">
+    <div class="stage-head">
+      <h2 class="torn" style="font-size:24px;">Experience</h2>
+      <div class="stage-desc">// the technical foundation everything else is built on</div>
+    </div>
+    <p style="max-width:680px; color:var(--text-dim); font-size:15px; margin-bottom:34px;">
+      Across a few roles in manufacturing operations, test &amp; diagnostics, and EV development, I've worked hands-on with vehicle bus diagnostics, hardware-in-the-loop platforms, and firmware provisioning infrastructure used to prototype and validate automotive platforms.
+    </p>
+    <div class="bento" style="grid-template-columns:repeat(4,1fr);">
+      <div class="card">
+        <span class="tag">Current</span>
+        <h3>Zoox — Hardware Software Integration</h3>
+        <p>Internal tooling, diagnostics, and provisioning systems for AV manufacturing and fleet ops.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Zoox</span>
+        <h3>Test &amp; Diagnostics</h3>
+        <p>Bus-level diagnostics and HIL validation for pre-production hardware.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Zoox</span>
+        <h3>Manufacturing Operations</h3>
+        <p>Line build-out and NPI support for AV production.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Ford</span>
+        <h3>Advanced EV Development</h3>
+        <p>Early-stage prototyping and validation tooling for electric vehicle platforms.</p>
       </div>
     </div>
-    <div class="hero-scrap hero-scrap-1">✦</div>
-    <div class="hero-scrap hero-scrap-2">✦</div>
-  </section>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="section-inner">
-      <p class="section-kicker">01 — About</p>
-      <h2 class="section-title torn">The short version</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            [Write 3–5 sentences here. Who are you, where'd you come from, what
-            do you care about, what are you building toward? Keep it honest and
-            a little rough around the edges — that's the point.]
-          </p>
-          <p>
-            [Optional second paragraph — a detour, a lesson learned, a project
-            that changed how you think, or what "resilient" means to you.]
-          </p>
-          <a href="Frank_Bernal_Resume.pdf" class="btn btn-outline" download>Download résumé ↓</a>
+<section class="stage" id="design">
+  <div class="wrap">
+    <p class="mono note-line" style="margin-bottom:36px;">// projects below are grouped by vehicle lifecycle stage — design, bring-up, diagnose, deploy — since that's roughly how I actually think about this work</p>
+    <div class="stage-head">
+      <span class="stage-idx">01</span>
+      <h2 class="torn">Design</h2>
+      <div class="stage-desc">// architecting how test data gets captured, structured, and made useful</div>
+    </div>
+    <div class="bento">
+      <div class="card big">
+        <span class="tag">Systems Architecture</span>
+        <h3>Test Decoration Platform</h3>
+        <p>A schema and enrichment layer for AV test data — raw diagnostic output paired with operator notes and automated annotation, so a failure log tells you what happened <em>and</em> what it meant.</p>
+        <div class="note">note — designed to answer "why" as fast as "what"</div>
+        <div class="stack-line"><span>FastAPI</span><span>Pydantic</span><span>Postgres</span><span>React</span></div>
+      </div>
+      <div class="card small">
+        <span class="tag">Framework</span>
+        <h3>9-Stage Vehicle Lifecycle</h3>
+        <p>A canonical model of how an AV moves from build to fleet, used to align manufacturing, test, and ops teams around a shared vocabulary.</p>
+      </div>
+      <div class="card small personal">
+        <div class="patch"></div>
+        <span class="tag">Personal — OSU HCI Capstone</span>
+        <h3>PawSignal System Architecture</h3>
+        <p>Designed a three-part system — PawPress hardware, PawSignal app, PawHome automation — as one connected architecture. Same layered-systems thinking, applied outside of work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stage" id="bringup">
+  <div class="wrap">
+    <div class="stage-head">
+      <span class="stage-idx">02</span>
+      <h2 class="torn">Bring-up</h2>
+      <div class="stage-desc">// getting hardware from the lift onto the floor, fast and repeatably</div>
+    </div>
+    <div class="bento">
+      <div class="card wide">
+        <span class="tag">Manufacturing Floor Tooling</span>
+        <h3>Mobile Work Test Station</h3>
+        <p>A portable test rig designed for vehicle bring-up and repair directly on the manufacturing floor — built to cut technician setup overhead and standardize how faults get caught before a vehicle ever leaves the line.</p>
+        <div class="metrics">
+          <span><b>53%</b> faster setup</span>
+          <span><b>40</b> technicians onboarded</span>
+          <span><b>100</b> units in fleet</span>
+          <span><b>5</b> locations</span>
         </div>
-        <div class="about-card">
-          <div class="polaroid">
-            <img src="assets/images/profile.jpg" alt="[Your Name]">
-            <p>that's me, [year]</p>
-          </div>
-        </div>
+      </div>
+      <div class="card small personal">
+        <div class="patch"></div>
+        <span class="tag">Personal — OSU HCI Capstone</span>
+        <h3>PawPress — Physical Prototype</h3>
+        <p>Built and iterated a physical push-button device for dogs to signal needs — hands-on hardware bring-up outside a manufacturing line.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section class="section section-alt" id="skills">
-    <div class="section-inner">
-      <p class="section-kicker">02 — Skills</p>
-      <h2 class="section-title torn">What I bring to the table</h2>
-      <div class="tag-cloud">
-        <span class="tag">[Skill 1]</span>
-        <span class="tag">[Skill 2]</span>
-        <span class="tag">[Skill 3]</span>
-        <span class="tag">[Skill 4]</span>
-        <span class="tag">[Skill 5]</span>
-        <span class="tag">[Skill 6]</span>
-        <span class="tag">[Skill 7]</span>
-        <span class="tag">[Skill 8]</span>
+<section class="stage" id="diagnose">
+  <div class="wrap">
+    <div class="stage-head">
+      <span class="stage-idx">03</span>
+      <h2 class="torn">Diagnose</h2>
+      <div class="stage-desc">// bus-level troubleshooting when something upstream goes quiet</div>
+    </div>
+    <div class="bento">
+      <div class="card big">
+        <span class="tag">CLI / Open Source</span>
+        <h3>CAN Bus Diagnostic Toolkit</h3>
+        <p>A command-line tool for reading bus-off states, ISO-TP transfers, and ECU flash failures without a full HIL rig — built from years of chasing the same faults manually.</p>
+        <div class="stack-line"><span>Python</span><span>CAN/LIN</span><span>ISO-TP</span><span>UDS</span></div>
+      </div>
+      <div class="card small">
+        <span class="tag">Test Infrastructure</span>
+        <h3>HIL Platform Work</h3>
+        <p>PXE-boot diagnostics and hardware-in-the-loop setups for pre-production validation across the Hardware Software Integration team.</p>
+      </div>
+      <div class="card small personal">
+        <div class="patch"></div>
+        <span class="tag">Personal — OSU HCI Capstone</span>
+        <h3>Heuristic Evaluation &amp; Usability Testing</h3>
+        <p>Ran structured usability and inclusivity walkthroughs with real users — my wife, and the dogs themselves — to catch friction before it shipped.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="section-inner">
-      <p class="section-kicker">03 — Work</p>
-      <h2 class="section-title torn">Things I've built</h2>
-      <div class="project-grid">
-
-        <article class="project-card tilt-l">
-          <div class="project-tape"></div>
-          <h3>[Project One]</h3>
-          <p>[One or two sentences on what it is and why it exists.]</p>
-          <p class="project-stack">[Tech, Tech, Tech]</p>
-          <div class="project-links">
-            <a href="#" class="btn btn-sm">Live ↗</a>
-            <a href="#" class="btn btn-sm btn-ghost">Code ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card tilt-r">
-          <div class="project-tape"></div>
-          <h3>[Project Two]</h3>
-          <p>[One or two sentences on what it is and why it exists.]</p>
-          <p class="project-stack">[Tech, Tech, Tech]</p>
-          <div class="project-links">
-            <a href="#" class="btn btn-sm">Live ↗</a>
-            <a href="#" class="btn btn-sm btn-ghost">Code ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card tilt-l">
-          <div class="project-tape"></div>
-          <h3>[Project Three]</h3>
-          <p>[One or two sentences on what it is and why it exists.]</p>
-          <p class="project-stack">[Tech, Tech, Tech]</p>
-          <div class="project-links">
-            <a href="#" class="btn btn-sm">Live ↗</a>
-            <a href="#" class="btn btn-sm btn-ghost">Code ↗</a>
-          </div>
-        </article>
-
-        <article class="project-card tilt-r">
-          <div class="project-tape"></div>
-          <h3>[Project Four]</h3>
-          <p>[One or two sentences on what it is and why it exists.]</p>
-          <p class="project-stack">[Tech, Tech, Tech]</p>
-          <div class="project-links">
-            <a href="#" class="btn btn-sm">Live ↗</a>
-            <a href="#" class="btn btn-sm btn-ghost">Code ↗</a>
-          </div>
-        </article>
-
+<section class="stage" id="deploy">
+  <div class="wrap">
+    <div class="stage-head">
+      <span class="stage-idx">04</span>
+      <h2 class="torn">Deploy</h2>
+      <div class="stage-desc">// provisioning and access, once the vehicle is out of the shop</div>
+    </div>
+    <div class="bento">
+      <div class="card small">
+        <span class="tag">Fleet Ops</span>
+        <h3>Provisioning Systems</h3>
+        <p>Tooling for standing up and configuring devices across the fleet without manual per-unit setup.</p>
+      </div>
+      <div class="card big">
+        <span class="tag">Zero-trust Access</span>
+        <h3>Remote Access, Without Open Ports</h3>
+        <p>Evaluating Teleport, Tailscale, and Ansible-pull patterns to replace raw SSH into fleet-facing Linux devices — job dispatch instead of exposed inbound access.</p>
+        <div class="stack-line"><span>Ansible</span><span>Linux</span><span>Teleport</span><span>Tailscale</span></div>
+      </div>
+      <div class="card small personal">
+        <div class="patch"></div>
+        <span class="tag">Personal — OSU HCI Capstone</span>
+        <h3>PawHome — Automation Layer</h3>
+        <p>Connected the signal device to home automation, closing the loop from a physical button press to an automated response in the house.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section class="section section-alt" id="contact">
-    <div class="section-inner contact-inner">
-      <p class="section-kicker">04 — Contact</p>
-      <h2 class="section-title torn">Let's build something</h2>
-      <p class="contact-text">
-        [A line inviting people to reach out — collabs, jobs, questions, whatever fits.]
-      </p>
-      <div class="contact-links">
-        <a href="mailto:your.email@example.com" class="btn btn-primary">✉ your.email@example.com</a>
-        <a href="https://github.com/your-username" class="btn btn-outline" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/f-bernal/" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn ↗</a>
+<section class="skills">
+  <div class="wrap">
+    <div class="skills-inner">
+      <div class="skill-col">
+        <div class="k">Languages</div>
+        <ul><li>Python</li><li>C++</li><li>Bash</li></ul>
+      </div>
+      <div class="skill-col">
+        <div class="k">Protocols</div>
+        <ul><li>CAN / LIN</li><li>ISO-TP</li><li>UDS</li></ul>
+      </div>
+      <div class="skill-col">
+        <div class="k">Infrastructure</div>
+        <ul><li>Ansible</li><li>Linux</li><li>CI/CD</li></ul>
+      </div>
+      <div class="skill-col">
+        <div class="k">Background</div>
+        <ul><li>Zoox — HSI</li><li>Zoox — Mfg Ops</li><li>Ford — EV Dev</li></ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-</main>
-
-<footer class="site-footer">
-  <p>Built scrappy by [Your Name] · <span id="year"></span> · patched together, still standing</p>
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <h2>Let's talk shop.</h2>
+        <p>Open to conversations on test infrastructure, AV manufacturing tooling, and developer platform roles.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:you@example.com">Email</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="Frank_Bernal_Resume.pdf">Resume ↓</a>
+      </div>
+    </div>
+    <div class="built-with">// built scrappy, tested thoroughly — patched together, still standing. Vanilla HTML &amp; CSS, no framework, hosted on GitHub Pages.</div>
+  </div>
 </footer>
 
 <script src="js/main.js"></script>
