@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Frank Bernal — Hardware Systems Engineer</title>
-<meta name="description" content="Frank Bernal — Hardware Systems Engineer. Test tooling, HIL platforms, and diagnostics for autonomous vehicle manufacturing.">
+<meta name="description" content="Frank Bernal — Hardware Systems Engineer at Zoox. Test infrastructure, HIL platforms, and diagnostics for autonomous vehicle manufacturing.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -21,7 +21,6 @@
     <rect width="100%" height="100%" filter="url(#grain)"></rect>
   </svg>
 </div>
-<canvas id="particle-canvas" aria-hidden="true"></canvas>
 
 <header>
   <div class="header-inner">
@@ -31,7 +30,7 @@
       <ul id="navList">
         <li><a href="#about"><span class="n">01</span>About</a></li>
         <li><a href="#experience"><span class="n">02</span>Experience</a></li>
-        <li><a href="#design"><span class="n">03</span>Projects</a></li>
+        <li><a href="#project"><span class="n">03</span>Project</a></li>
         <li><a href="#contact"><span class="n">04</span>Contact</a></li>
       </ul>
     </nav>
@@ -46,19 +45,19 @@
   </svg>
   <div class="wrap">
     <div class="stamp">FIELD-TESTED · STILL RUNNING</div>
-    <div class="eyebrow">Hardware Systems Engineer — AV Manufacturing &amp; Test</div>
+    <div class="eyebrow">Hardware Systems Engineer — Zoox</div>
     <h1>I build the infrastructure that gets <span class="accent">vehicles from bring-up to bus-ready.</span></h1>
     <p class="hero-sub">Test tooling, HIL platforms, and diagnostics for autonomous vehicle manufacturing — the layer between a car on a lift and a car on the road.</p>
-    <p class="mono note-line">// most of my work is pulling a clean signal out of a noisy line</p>
+    <p class="mono note-line">// most of my work is proprietary — this page favors scope and measured impact over implementation detail</p>
     <div class="hero-actions">
-      <a href="#design" class="btn btn-primary">View the work →</a>
+      <a href="Frank_Bernal_Resume.pdf" class="btn btn-primary">Download résumé ↓</a>
       <a href="#contact" class="btn btn-ghost">Get in touch</a>
     </div>
     <div class="readout">
-      <div><div class="val">53%</div><div class="lbl">Setup time reduced</div></div>
-      <div><div class="val">100</div><div class="lbl">Units fielded</div></div>
-      <div><div class="val">500+</div><div class="lbl">AVs serviced</div></div>
-      <div><div class="val">5</div><div class="lbl">Sites deployed</div></div>
+      <div><div class="val">53%</div><div class="lbl">Test time reduced</div></div>
+      <div><div class="val">30%</div><div class="lbl">Deployment time cut</div></div>
+      <div><div class="val">80%</div><div class="lbl">Fewer issue tickets</div></div>
+      <div><div class="val">5+</div><div class="lbl">Years in AV mfg</div></div>
     </div>
   </div>
 </section>
@@ -69,7 +68,14 @@
       <h2 class="torn" style="font-size:24px;">About</h2>
     </div>
     <p style="max-width:640px; color:var(--text-dim); font-size:15.5px; line-height:1.75;">
-      I'm a Hardware Systems Engineer at Zoox on the Hardware Software Integration team, where I build internal tooling, diagnostics, and provisioning systems that help engineers and manufacturing teams work with autonomous vehicles more efficiently. Before this I was at Ford in Advanced EV Development, plus a few earlier roles at Zoox spanning manufacturing operations and test &amp; diagnostics — so I've got a pretty grounded, hands-on view of how hardware and software actually have to work together at scale, not just in theory. I'm finishing an MS in Computer Science at Oregon State University right now, working toward platform engineering roles in robotics and autonomy. Outside of work I bring the same instinct to hands-on projects — home renovation, building a communication device for my dogs — and I'm generally drawn to work that makes life easier for the people actually operating complex systems day to day.
+      I'm a Hardware Systems Engineer at Zoox on the Hardware Software Integration team, where I build internal
+      tooling, diagnostics, and provisioning systems that help engineers and manufacturing teams work with
+      autonomous vehicles more efficiently. Before this I spent time at Ford in Advanced EV Development managing a
+      HIL (LabCar) test environment, and earlier roles at Zoox spanning manufacturing operations, diagnostics, and
+      test engineering — so I've got a grounded, hands-on view of how hardware and software actually have to work
+      together at production scale, not just in theory. I'm finishing an M.S. in Computer Science at Oregon State
+      University (expected Spring 2027), building on a B.S. in Electrical Engineering — Power and Control Systems —
+      from Cal State Long Beach.
     </p>
   </div>
 </section>
@@ -78,150 +84,101 @@
   <div class="wrap">
     <div class="stage-head">
       <h2 class="torn" style="font-size:24px;">Experience</h2>
-      <div class="stage-desc">// the technical foundation everything else is built on</div>
+      <div class="stage-desc">// scope and outcomes — not implementation, most of this is proprietary</div>
     </div>
-    <p style="max-width:680px; color:var(--text-dim); font-size:15px; margin-bottom:34px;">
-      Across a few roles in manufacturing operations, test &amp; diagnostics, and EV development, I've worked hands-on with vehicle bus diagnostics, hardware-in-the-loop platforms, and firmware provisioning infrastructure used to prototype and validate automotive platforms.
-    </p>
-    <div class="bento" style="grid-template-columns:repeat(4,1fr);">
-      <div class="card">
-        <span class="tag">Current</span>
-        <h3>Zoox — Hardware Software Integration</h3>
-        <p>Internal tooling, diagnostics, and provisioning systems for AV manufacturing and fleet ops.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Zoox</span>
-        <h3>Test &amp; Diagnostics</h3>
-        <p>Bus-level diagnostics and HIL validation for pre-production hardware.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Zoox</span>
-        <h3>Manufacturing Operations</h3>
-        <p>Line build-out and NPI support for AV production.</p>
-      </div>
-      <div class="card">
-        <span class="tag">Ford</span>
-        <h3>Advanced EV Development</h3>
-        <p>Early-stage prototyping and validation tooling for electric vehicle platforms.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="stage" id="design">
-  <div class="wrap">
-    <p class="mono note-line" style="margin-bottom:36px;">// projects below are grouped by vehicle lifecycle stage — design, bring-up, diagnose, deploy — since that's roughly how I actually think about this work</p>
-    <div class="stage-head">
-      <span class="stage-idx">01</span>
-      <h2 class="torn">Design</h2>
-      <div class="stage-desc">// architecting how test data gets captured, structured, and made useful</div>
-    </div>
-    <div class="bento">
-      <div class="card big">
-        <span class="tag">Systems Architecture</span>
-        <h3>Test Decoration Platform</h3>
-        <p>A schema and enrichment layer for AV test data — raw diagnostic output paired with operator notes and automated annotation, so a failure log tells you what happened <em>and</em> what it meant.</p>
-        <div class="note">note — designed to answer "why" as fast as "what"</div>
-        <div class="stack-line"><span>FastAPI</span><span>Pydantic</span><span>Postgres</span><span>React</span></div>
-      </div>
-      <div class="card small">
-        <span class="tag">Framework</span>
-        <h3>9-Stage Vehicle Lifecycle</h3>
-        <p>A canonical model of how an AV moves from build to fleet, used to align manufacturing, test, and ops teams around a shared vocabulary.</p>
-      </div>
-      <div class="card small personal">
-        <div class="patch"></div>
-        <span class="tag">Personal — OSU HCI Capstone</span>
-        <h3>PawSignal System Architecture</h3>
-        <p>Designed a three-part system — PawPress hardware, PawSignal app, PawHome automation — as one connected architecture. Same layered-systems thinking, applied outside of work.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="timeline">
 
-<section class="stage" id="bringup">
-  <div class="wrap">
-    <div class="stage-head">
-      <span class="stage-idx">02</span>
-      <h2 class="torn">Bring-up</h2>
-      <div class="stage-desc">// getting hardware from the lift onto the floor, fast and repeatably</div>
-    </div>
-    <div class="bento">
-      <div class="card wide">
-        <span class="tag">Manufacturing Floor Tooling</span>
-        <h3>Mobile Work Test Station</h3>
-        <p>A portable test rig designed for vehicle bring-up and repair directly on the manufacturing floor — built to cut technician setup overhead and standardize how faults get caught before a vehicle ever leaves the line.</p>
-        <div class="metrics">
-          <span><b>53%</b> faster setup</span>
-          <span><b>40</b> technicians onboarded</span>
-          <span><b>100</b> units in fleet</span>
-          <span><b>5</b> locations</span>
+      <div class="role">
+        <div class="role-meta">
+          <span class="role-company">Zoox</span>
+          <span class="role-dates">Feb 2026 — Present</span>
         </div>
+        <h3 class="role-title">Hardware Systems Engineer <span class="role-team">· Hardware Software Integration</span></h3>
+        <ul class="role-bullets">
+          <li>Engineered a self-service Firmware Flash Station that automates ECU and client device flashing by pulling images directly from AWS S3, removing a manual bottleneck from the production line.</li>
+          <li>Developed a context framework for an agentic test-asset knowledge base, enabling automated retrieval and resolution of test asset issues.</li>
+        </ul>
       </div>
-      <div class="card small personal">
-        <div class="patch"></div>
-        <span class="tag">Personal — OSU HCI Capstone</span>
-        <h3>PawPress — Physical Prototype</h3>
-        <p>Built and iterated a physical push-button device for dogs to signal needs — hands-on hardware bring-up outside a manufacturing line.</p>
+
+      <div class="role">
+        <div class="role-meta">
+          <span class="role-company">Ford</span>
+          <span class="role-dates">May 2025 — Feb 2026</span>
+        </div>
+        <h3 class="role-title">Prototype Development Engineer <span class="role-team">· Advanced EV Development</span></h3>
+        <ul class="role-bullets">
+          <li>Supported advanced EV prototype development by managing a HIL (LabCar) test environment, triaging platform issues, maintaining tester configurations, and developing automated flashing tools using JTAG and UDS.</li>
+        </ul>
       </div>
+
+      <div class="role">
+        <div class="role-meta">
+          <span class="role-company">Zoox</span>
+          <span class="role-dates">Jan 2024 — May 2025</span>
+        </div>
+        <h3 class="role-title">Test and Diagnostics Engineer <span class="role-team">· Manufacturing Operations</span></h3>
+        <ul class="role-bullets">
+          <li>Drove technical investigations to develop a scalable End-of-Line (EOL) test plan and a "headless" ethernet testing framework, enhancing factory testing efficiency while eliminating supplemental test hardware and reducing costs.</li>
+          <li>Managed test infrastructure integration during new mass-production factory equipment installations, coordinating Factory Acceptance Testing (FAT) at supplier buy-off through final install.</li>
+          <li>Managed diagnostic partners to align vehicle build processes (56 days) with a production goal of 3 vehicles/hour, <b>reducing testing time by 53%</b>.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-meta">
+          <span class="role-company">Zoox</span>
+          <span class="role-dates">Sep 2022 — Jan 2024</span>
+        </div>
+        <h3 class="role-title">Hardware Systems Engineer <span class="role-team">· Hardware Software Integration</span></h3>
+        <ul class="role-bullets">
+          <li>Spearheaded end-to-end development of the "Tester PC" — a shared hardware/software platform with custom PCBs, harnessing, and peripherals — adopted from prototyping to deployment across Manufacturing, Service, and Vehicle Integration, including use as a HIL test platform.</li>
+          <li>Owned Tier 3 troubleshooting and design improvements for the Manufacturing Tester Fleet, executing preventative maintenance plans with MFG Operations Engineering.</li>
+          <li>Established test-asset workflows with DevOps, IT, and PLM, implementing Ansible group configurations and <b>reducing deployment time by 30%</b>.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-meta">
+          <span class="role-company">Zoox</span>
+          <span class="role-dates">Dec 2020 — Sep 2022</span>
+        </div>
+        <h3 class="role-title">Diagnostics Engineer <span class="role-team">· Manufacturing Operations</span></h3>
+        <ul class="role-bullets">
+          <li>Created a queryable issue-resolution database used by R&amp;D and service teams, supporting FMEA activities and diagnostic fault-tree initiatives.</li>
+          <li>Led daily cross-functional efforts to accelerate vehicle build progression, resulting in an <b>80% decrease in issue tickets</b> and improved assembly reliability.</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section class="stage" id="diagnose">
+<section class="stage" id="project">
   <div class="wrap">
     <div class="stage-head">
-      <span class="stage-idx">03</span>
-      <h2 class="torn">Diagnose</h2>
-      <div class="stage-desc">// bus-level troubleshooting when something upstream goes quiet</div>
+      <span class="stage-idx">—</span>
+      <h2 class="torn">PawSignal</h2>
+      <div class="stage-desc">// the one project here I can show in full, top to bottom</div>
     </div>
-    <div class="bento">
-      <div class="card big">
-        <span class="tag">CLI / Open Source</span>
-        <h3>CAN Bus Diagnostic Toolkit</h3>
-        <p>A command-line tool for reading bus-off states, ISO-TP transfers, and ECU flash failures without a full HIL rig — built from years of chasing the same faults manually.</p>
-        <div class="stack-line"><span>Python</span><span>CAN/LIN</span><span>ISO-TP</span><span>UDS</span></div>
-      </div>
-      <div class="card small">
-        <span class="tag">Test Infrastructure</span>
-        <h3>HIL Platform Work</h3>
-        <p>PXE-boot diagnostics and hardware-in-the-loop setups for pre-production validation across the Hardware Software Integration team.</p>
-      </div>
-      <div class="card small personal">
-        <div class="patch"></div>
-        <span class="tag">Personal — OSU HCI Capstone</span>
-        <h3>Heuristic Evaluation &amp; Usability Testing</h3>
-        <p>Ran structured usability and inclusivity walkthroughs with real users — my wife, and the dogs themselves — to catch friction before it shipped.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <p class="mono note-line" style="margin-bottom:30px;">// everything above is proprietary — this is my OSU HCI capstone, a system I designed, built, and tested end to end</p>
 
-<section class="stage" id="deploy">
-  <div class="wrap">
-    <div class="stage-head">
-      <span class="stage-idx">04</span>
-      <h2 class="torn">Deploy</h2>
-      <div class="stage-desc">// provisioning and access, once the vehicle is out of the shop</div>
-    </div>
-    <div class="bento">
-      <div class="card small">
-        <span class="tag">Fleet Ops</span>
-        <h3>Provisioning Systems</h3>
-        <p>Tooling for standing up and configuring devices across the fleet without manual per-unit setup.</p>
-      </div>
-      <div class="card big">
-        <span class="tag">Zero-trust Access</span>
-        <h3>Remote Access, Without Open Ports</h3>
-        <p>Evaluating Teleport, Tailscale, and Ansible-pull patterns to replace raw SSH into fleet-facing Linux devices — job dispatch instead of exposed inbound access.</p>
-        <div class="stack-line"><span>Ansible</span><span>Linux</span><span>Teleport</span><span>Tailscale</span></div>
-      </div>
-      <div class="card small personal">
-        <div class="patch"></div>
-        <span class="tag">Personal — OSU HCI Capstone</span>
-        <h3>PawHome — Automation Layer</h3>
-        <p>Connected the signal device to home automation, closing the loop from a physical button press to an automated response in the house.</p>
-      </div>
+    <div class="project-card">
+      <div class="patch"></div>
+      <span class="tag">Personal — OSU HCI Capstone</span>
+      <h3>A communication device for my dogs</h3>
+      <p>
+        A three-part connected system built the same way I approach hardware at work — layered, testable, and
+        designed around the people (or dogs) actually using it. <b>PawPress</b> is the physical push-button hardware
+        prototype. <b>PawSignal</b> is the app layer that receives and routes each signal. <b>PawHome</b> closes the
+        loop by triggering a home-automation response, turning a single button press into an automated action in
+        the house.
+      </p>
+      <p>
+        I validated the design with structured usability and inclusivity walkthroughs — real users, real friction,
+        caught before it shipped — the same heuristic-evaluation discipline I'd apply to a factory test rig.
+      </p>
+      <div class="stack-line"><span>Hardware Prototyping</span><span>Home Automation</span><span>Usability Testing</span><span>Systems Design</span></div>
     </div>
   </div>
 </section>
@@ -230,20 +187,20 @@
   <div class="wrap">
     <div class="skills-inner">
       <div class="skill-col">
-        <div class="k">Languages</div>
-        <ul><li>Python</li><li>C++</li><li>Bash</li></ul>
+        <div class="k">Software</div>
+        <ul><li>Python, Bash, SQL</li><li>Git, GitHub, CI/CD (Bamboo)</li><li>Ansible, SALT, Linux</li><li>Networking (TCP/IP, DNS, DHCP)</li></ul>
       </div>
       <div class="skill-col">
-        <div class="k">Protocols</div>
-        <ul><li>CAN / LIN</li><li>ISO-TP</li><li>UDS</li></ul>
+        <div class="k">Hardware</div>
+        <ul><li>Autonomous Vehicles, HIL</li><li>CAN, Ethernet, LIN, JTAG</li><li>Altium, DFM, DFMEA</li><li>Oscilloscope, DMM, Soldering</li></ul>
       </div>
       <div class="skill-col">
-        <div class="k">Infrastructure</div>
-        <ul><li>Ansible</li><li>Linux</li><li>CI/CD</li></ul>
+        <div class="k">Manufacturing</div>
+        <ul><li>PFMEA, PLM, NPI</li><li>Process Optimization</li><li>5S (LEAN), SCADA</li><li>Quality Control</li></ul>
       </div>
       <div class="skill-col">
-        <div class="k">Background</div>
-        <ul><li>Zoox — HSI</li><li>Zoox — Mfg Ops</li><li>Ford — EV Dev</li></ul>
+        <div class="k">Education</div>
+        <ul><li>M.S. Computer Science — Oregon State (2027)</li><li>B.S. Electrical Engineering — CSU Long Beach</li></ul>
       </div>
     </div>
   </div>
@@ -254,12 +211,12 @@
     <div class="footer-inner">
       <div>
         <h2>Let's talk shop.</h2>
-        <p>Open to conversations on test infrastructure, AV manufacturing tooling, and developer platform roles.</p>
+        <p>Open to conversations on test infrastructure, AV manufacturing tooling, and platform engineering roles.</p>
       </div>
       <div class="footer-links">
-        <a href="mailto:you@example.com">Email</a>
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
+        <a href="mailto:mendezfrank42@gmail.com">Email</a>
+        <a href="https://github.com/mendezfrank" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/f-bernal" target="_blank" rel="noopener">LinkedIn</a>
         <a href="Frank_Bernal_Resume.pdf">Resume ↓</a>
       </div>
     </div>
