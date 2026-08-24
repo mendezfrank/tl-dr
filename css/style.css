@@ -1,13 +1,17 @@
+/* OpenDyslexic — served from the Fontsource package on jsDelivr.
+   woff2 first, woff from the upstream package as a fallback. */
 @font-face{
   font-family:'OpenDyslexic';
-  src:url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.woff2') format('woff2');
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5.3.0/files/opendyslexic-latin-400-normal.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/woff/OpenDyslexic-Regular.woff') format('woff');
   font-weight:400;
   font-style:normal;
   font-display:swap;
 }
 @font-face{
   font-family:'OpenDyslexic';
-  src:url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-bold.woff2') format('woff2');
+  src:url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@5.3.0/files/opendyslexic-latin-700-normal.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/woff/OpenDyslexic-Bold.woff') format('woff');
   font-weight:700;
   font-style:normal;
   font-display:swap;
@@ -314,8 +318,12 @@ footer p{color:var(--text-dim); font-size:13px; max-width:400px;}
 body.dyslexia-mode,
 body.dyslexia-mode h1,
 body.dyslexia-mode h2,
-body.dyslexia-mode h3{
-  font-family:'OpenDyslexic', 'Comic Sans MS', 'Comic Sans', sans-serif;
+body.dyslexia-mode h3,
+body.dyslexia-mode .btn,
+body.dyslexia-mode .nav-toggle,
+body.dyslexia-mode .dys-toggle,
+body.dyslexia-mode .exp-fig .lbl-t{
+  font-family:'OpenDyslexic', 'Comic Sans MS', 'Comic Sans', Verdana, sans-serif;
 }
 body.dyslexia-mode{line-height:1.85; letter-spacing:0.01em;}
 body.dyslexia-mode p, body.dyslexia-mode li{line-height:1.85; word-spacing:0.06em;}
