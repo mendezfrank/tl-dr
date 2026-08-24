@@ -80,7 +80,7 @@ header{
   font-weight:600; font-size:14px;
 }
 .logo .cursor{
-  color:var(--accent);
+  color:var(--text-faint);
   animation:blink 1.1s steps(1) infinite;
 }
 @keyframes blink{ 50%{ opacity:0; } }
@@ -201,7 +201,9 @@ h1 .accent{color:var(--accent);}
   font-weight:600; font-size:18px;
   text-transform:lowercase;
 }
-.hash{color:var(--accent);}
+/* Accent is reserved for data, status, and interactive elements.
+   These marks are wayfinding, so they stay neutral. */
+.hash{color:var(--text-faint);}
 
 /* ---------- Tech chips ---------- */
 .stack-line{display:flex; gap:6px; flex-wrap:wrap; margin-top:14px;}
@@ -280,7 +282,7 @@ h1 .accent{color:var(--accent);}
 .art-name{
   font-size:11.5px;
   font-weight:600;
-  color:var(--accent);
+  color:var(--text);
 }
 .art-desc{
   font-size:11px;
@@ -338,7 +340,7 @@ h1 .accent{color:var(--accent);}
   font-size:11.5px;
   color:var(--text-faint);
 }
-.embed-url::before{content:'▸ '; color:var(--accent);}
+.embed-url::before{content:'▸ '; color:var(--text-faint);}
 .embed-links{display:flex; gap:14px; flex-wrap:wrap;}
 .embed-bar a{
   text-decoration:none;
