@@ -301,6 +301,7 @@ h1 .accent{color:var(--accent);}
   color:var(--text-faint);
 }
 .embed-url::before{content:'▸ '; color:var(--accent);}
+.embed-links{display:flex; gap:14px; flex-wrap:wrap;}
 .embed-bar a{
   text-decoration:none;
   color:var(--text-dim);
