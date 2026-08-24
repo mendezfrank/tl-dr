@@ -18,16 +18,18 @@
 }
 
 :root{
-  --bg: #f4f2ec;
-  --panel: #fbfaf6;
-  --text: #1c1e18;
-  --text-dim: #55584c;
-  --text-faint: #6b6d60;
-  --accent: #a6521c;
-  --accent-dim: #8f5a2a;
-  --rule: #d8d5c9;
-  --grid: rgba(28,30,24,0.032);
-  --fig: #9a9789;
+  /* petrol — cool grey-green paper, deep teal signal.
+     contrast vs --bg: text 14.9:1, dim 6.9:1, faint 4.7:1, accent 5.5:1 */
+  --bg: #e9eeed;
+  --panel: #f7faf9;
+  --text: #0d1c1a;
+  --text-dim: #3d5450;
+  --text-faint: #556e69;
+  --accent: #0a6a60;
+  --accent-dim: #0f5049;
+  --rule: #c8d5d2;
+  --grid: rgba(13,28,26,0.04);
+  --fig: #8aa39e;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
